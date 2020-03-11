@@ -3,8 +3,7 @@ import { Button } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Countdown from "C:\Users\AAVodovoz\GitHub\physicscoach2fork\src\Components\NewSession\Countdown.jsx";
-
+import Countdown from './Countdown.jsx'
 import { connect } from "react-redux";
 import { activatePushProtocol } from "../../store";
 
@@ -90,7 +89,7 @@ class PushProtocolButton extends Component {
   };
 
   onClick = () => {
-    this.Countdown.toggleTimerRunning();
+    Countdown.toggleTimerRunning();
     this.props.activatePushProtocol(Math.floor(this.props.elapsedTime / 60));
     this.props.finishPractice();
   };
